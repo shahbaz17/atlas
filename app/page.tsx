@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Home() {
-  const url = currentURL("/");
+  const url = currentURL("/frame");
 
   return (
     <div>
