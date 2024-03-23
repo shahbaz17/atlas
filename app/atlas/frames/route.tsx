@@ -1,8 +1,33 @@
 /* eslint-disable react/jsx-key */
-import { createFrames, Button } from "frames.js/next"; // Adjust import path if necessary
+import { createFrames, Button } from "frames.js/next";
+import { farcasterHubContext, openframes } from "frames.js/middleware";
+import { getXmtpFrameMessage, isXmtpFrameActionPayload } from "frames.js/xmtp";
+import { DEFAULT_DEBUGGER_HUB_URL } from "./../../debug";
 
 const frames = createFrames({
   basePath: "/atlas/frames",
+  middleware: [
+    farcasterHubContext({
+      hubHttpUrl: DEFAULT_DEBUGGER_HUB_URL,
+    }),
+    openframes({
+      clientProtocol: {
+        id: "xmtp",
+        version: "2024-02-09",
+      },
+      handler: {
+        isValidPayload: (body: JSON) => isXmtpFrameActionPayload(body),
+        getFrameMessage: async (body: JSON) => {
+          if (!isXmtpFrameActionPayload(body)) {
+            return undefined;
+          }
+          const result = await getXmtpFrameMessage(body);
+
+          return { ...result };
+        },
+      },
+    }),
+  ],
 });
 
 const handleRequest = frames(async (ctx) => {
