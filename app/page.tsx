@@ -10,22 +10,22 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "A multi-page example for Atlas Quiz!",
     other: {
       ...(await fetchMetadata(
-        new URL("/", vercelURL() || "http://localhost:3000")
+        new URL("/frame", vercelURL() || "http://localhost:3000")
       )),
     },
   };
 }
 
-// export default async function Home() {
-//   const url = currentURL("/");
+export default async function Home() {
+  const url = currentURL("/");
 
-//   return (
-//     <div>
-//       Atlas Quiz!
-//       <br />
-//       <Link href={createDebugUrl(url)} className="underline">
-//         Debug on Frames.js Debugger
-//       </Link>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      Atlas Quiz!
+      <br />
+      <Link href={createDebugUrl(url)} className="underline">
+        Debug on Frames.js Debugger
+      </Link>
+    </div>
+  );
+}

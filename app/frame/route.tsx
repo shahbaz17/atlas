@@ -2,10 +2,10 @@
 import { createFrames, Button } from "frames.js/next";
 import { farcasterHubContext, openframes } from "frames.js/middleware";
 import { getXmtpFrameMessage, isXmtpFrameActionPayload } from "frames.js/xmtp";
-import { DEFAULT_DEBUGGER_HUB_URL } from "./debug";
+import { DEFAULT_DEBUGGER_HUB_URL } from "../debug";
 
 const frames = createFrames({
-  basePath: "/",
+  basePath: "/frame",
   middleware: [
     farcasterHubContext({
       hubHttpUrl: DEFAULT_DEBUGGER_HUB_URL,
