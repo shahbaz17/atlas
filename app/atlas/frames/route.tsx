@@ -176,18 +176,7 @@ const handleRequest = frames(async (ctx) => {
                   >
                     Dollar
                   </Button>,
-                  <Button
-                    action="post"
-                    target={{
-                      query: {
-                        country: "India",
-                        questionType: "currency",
-                        capitalValue: "Rupee",
-                      },
-                    }}
-                  >
-                    Rupee
-                  </Button>,
+
                   <Button
                     action="post"
                     target={{
@@ -211,6 +200,18 @@ const handleRequest = frames(async (ctx) => {
                     }}
                   >
                     Yen
+                  </Button>,
+                  <Button
+                    action="post"
+                    target={{
+                      query: {
+                        country: "India",
+                        questionType: "currency",
+                        capitalValue: "Rupee",
+                      },
+                    }}
+                  >
+                    Rupee
                   </Button>,
                 ],
               };
@@ -274,11 +275,11 @@ const handleRequest = frames(async (ctx) => {
                       query: {
                         country: "USA",
                         questionType: "capital",
-                        capitalValue: "New York City",
+                        capitalValue: "Washington, D.C.",
                       },
                     }}
                   >
-                    New York City
+                    Washington, D.C.
                   </Button>,
                   <Button
                     action="post"
@@ -286,11 +287,11 @@ const handleRequest = frames(async (ctx) => {
                       query: {
                         country: "USA",
                         questionType: "capital",
-                        capitalValue: "Washington, D.C.",
+                        capitalValue: "New York City",
                       },
                     }}
                   >
-                    Washington, D.C.
+                    New York City
                   </Button>,
                   <Button
                     action="post"
@@ -375,18 +376,6 @@ const handleRequest = frames(async (ctx) => {
                       query: {
                         country: "USA",
                         questionType: "currency",
-                        capitalValue: "Dollar",
-                      },
-                    }}
-                  >
-                    Dollar
-                  </Button>,
-                  <Button
-                    action="post"
-                    target={{
-                      query: {
-                        country: "USA",
-                        questionType: "currency",
                         capitalValue: "Rupee",
                       },
                     }}
@@ -404,6 +393,18 @@ const handleRequest = frames(async (ctx) => {
                     }}
                   >
                     Euro
+                  </Button>,
+                  <Button
+                    action="post"
+                    target={{
+                      query: {
+                        country: "USA",
+                        questionType: "currency",
+                        capitalValue: "Dollar",
+                      },
+                    }}
+                  >
+                    Dollar
                   </Button>,
                   <Button
                     action="post"
@@ -487,18 +488,7 @@ const handleRequest = frames(async (ctx) => {
                   >
                     Munich
                   </Button>,
-                  <Button
-                    action="post"
-                    target={{
-                      query: {
-                        country: "Germany",
-                        questionType: "capital",
-                        capitalValue: "Berlin",
-                      },
-                    }}
-                  >
-                    Berlin
-                  </Button>,
+
                   <Button
                     action="post"
                     target={{
@@ -510,6 +500,18 @@ const handleRequest = frames(async (ctx) => {
                     }}
                   >
                     Hamburg
+                  </Button>,
+                  <Button
+                    action="post"
+                    target={{
+                      query: {
+                        country: "Germany",
+                        questionType: "capital",
+                        capitalValue: "Berlin",
+                      },
+                    }}
+                  >
+                    Berlin
                   </Button>,
                   <Button
                     action="post"
