@@ -637,7 +637,9 @@ const handleRequest = frames(async (ctx) => {
       return {
         image: (
           <div tw="bg-purple-800 text-white w-full h-full justify-center items-center flex">
-            <div tw="flex text-5xl">Select a county to start the quiz!🎉</div>
+            <div tw="flex text-5xl">
+              Select a 🌎 country to start the 🌐 Atlas quiz!🎉
+            </div>
           </div>
         ),
         buttons: [
